@@ -1,10 +1,10 @@
 <template lang="html">
   <div>
-   <h3>{{movie.title}}</h3>
+   <h2>{{movie.title}}</h2>
    <p>Description: {{movie.description}}</p>
    <p>Rating: {{movie.rt_score}}</p>
    <p>Director: {{movie.director}}</p>
-   <p>Characters: {{movie.people}}</p>
+   <p>Release Date: {{movie.release_date}}</p>
  </div>
 </template>
 
