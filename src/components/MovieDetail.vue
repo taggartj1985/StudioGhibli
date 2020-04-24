@@ -3,6 +3,8 @@
    <h3>{{movie.title}}</h3>
    <p>Description: {{movie.description}}</p>
    <p>Rating: {{movie.rt_score}}</p>
+   <p>Director: {{movie.director}}</p>
+   <p>Characters: {{movie.people}}</p>
  </div>
 </template>
 

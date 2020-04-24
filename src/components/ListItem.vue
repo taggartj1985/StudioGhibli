@@ -1,8 +1,8 @@
 <template lang="html">
 <div >
-  <ul>
+
   <li v-on:click="handleClick">{{movie.title}}</li>
-  </ul>
+
   </div>
 </template>
 
