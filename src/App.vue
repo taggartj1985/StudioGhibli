@@ -8,10 +8,18 @@
       <section id="list">
     <movie-list :movies='movies'></movie-list>
       </section>
+
     <movie-detail id="movie-list" v-if="selectedMovie" :movie="selectedMovie"></movie-detail>
-    <canvas id="canvas" width="100%" height="100%"></canvas>
+    <button v-if="!watchedMovies.includes(selectedMovie)" v-on:click="addToWatched">Watched</button>
       </div>
+      <!-- <canvas id="canvas" width="100%" height="100%"></canvas> -->
+      <div id="watched-movies">
+      <h1>Watched Movies</h1>
+        <li v-for="watchedMovie in watchedMovies">{{watchedMovie.title}}</li>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -26,6 +34,7 @@ export default {
     return {
       movies: [],
       selectedMovie: null,
+      watchedMovies: [],
     };
   },
   mounted(){
@@ -40,8 +49,13 @@ export default {
   components: {
     "movie-list": MovieList,
     "movie-detail": MovieDetail
-  }
+  },
 
+  methods: {
+      addToWatched: function(){
+        this.watchedMovies.push(this.selectedMovie)
+      },
+    }
 }
 
 </script>
@@ -65,7 +79,7 @@ export default {
   font-size: 25px;
   font-weight: bold;
   color: black;
-  margin: 10;
+  margin: 20;
 }
 
 #movie-list{
