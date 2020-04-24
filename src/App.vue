@@ -8,6 +8,7 @@
     <movie-list :movies='movies'></movie-list>
       </section>
     <movie-detail v-if="selectedMovie" :movie="selectedMovie"></movie-detail>
+    <canvas id="canvas" width="100%" height="100%"></canvas>
   </div>
 </template>
 
@@ -57,6 +58,7 @@ export default {
   text-align: center;
 }
 
-#list{ display: inline-block; }
+#canvas{ border: 1px solid black;
+background: red;}
 
 </style>
