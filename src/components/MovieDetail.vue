@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div  class="background" :style="{'background-image':'url(character.png)'}">
    <h2>{{movie.title}}</h2>
    <p>Description: {{movie.description}}</p>
    <p>Rating: {{movie.rt_score}}</p>
@@ -16,4 +16,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+
 </style>

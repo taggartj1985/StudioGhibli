@@ -1,8 +1,6 @@
 <template lang="html">
   <div>
-<ul class="list">
     <list-item v-for="(movie, index) in movies" :movie="movie"  :key="index"> </list-item>
-</ul>
 </div>
 </template>
 

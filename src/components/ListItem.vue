@@ -1,7 +1,8 @@
 <template lang="html">
-<div >
-
+<div  class="list">
+<ul>
   <li v-on:click="handleClick">{{movie.title}}</li>
+</ul>
 
   </div>
 </template>
@@ -20,5 +21,22 @@ export default {
 }
 </script>
 
+
 <style lang="css" scoped>
+.list{
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+ul {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 100%;
+   padding-left: 0;
+ }
+
+
+
 </style>

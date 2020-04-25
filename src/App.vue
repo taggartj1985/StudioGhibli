@@ -4,17 +4,23 @@
     <section id="header">
   <img src="logo.png" alt="totoro">
     <h1>Movie List</h1>
-  </section>
-      <section id="list">
+    </section>
+      <div class="list">
     <movie-list :movies='movies'></movie-list>
-      </section>
+  </div>
+
+    <section>
+
 
     <movie-detail id="movie-list" v-if="selectedMovie" :movie="selectedMovie"></movie-detail>
+
+    </section>
+
     <button v-if="!watchedMovies.includes(selectedMovie)" v-on:click="addToWatched">Watched</button>
       </div>
       <!-- <canvas id="canvas" width="100%" height="100%"></canvas> -->
       <div id="watched-movies">
-      <h1>Watched Movies</h1>
+        <h1>Watched Movies</h1>
         <li v-for="watchedMovie in watchedMovies">{{watchedMovie.title}}</li>
       </div>
     </div>
@@ -67,6 +73,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 0px;
+
 }
 
 #header{
@@ -75,17 +82,14 @@ export default {
   color: black;
 }
 
-#list{
-  font-size: 25px;
-  font-weight: bold;
-  color: black;
-  margin: 20;
-}
+
 
 #movie-list{
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
+  text-align: center;
   color: black;
+  opacity: 0.85;
 }
 
 #white{
